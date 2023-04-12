@@ -1,4 +1,5 @@
 <script>
+import JumbotronItem from "./JumbotronItem.vue";
 import NavbarItem from "./NavbarItem.vue"
  export default {
     name: 'Header',
@@ -8,15 +9,15 @@ import NavbarItem from "./NavbarItem.vue"
         }
     },
     components:{
-        NavbarItem
-    }
+    NavbarItem,
+    JumbotronItem
+}
  }
 </script>
 
 <template>
-    <NavbarItem>
-
-    </NavbarItem>
+    <NavbarItem></NavbarItem>
+    <JumbotronItem></JumbotronItem>
 </template>
 
 <style scoped>

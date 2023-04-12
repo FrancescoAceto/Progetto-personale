@@ -30,7 +30,7 @@ export default {
         </div>
         
         <div class="Links" v-for="NavbarLinks in NavbarLinks">
-            <div>{{ NavbarLinks.text }} <i class="fa-solid fa-chevron-down"></i></div>
+            <div><strong>{{ NavbarLinks.text }} </strong><i class="fa-solid fa-chevron-down"></i></div>
         </div>
 
         <div class="Icons-container">
@@ -47,7 +47,8 @@ export default {
     .Navbar{
         display: flex;
         justify-content: space-evenly;
-        padding: 20px;
+        padding: 25px;
+        background-color: #f8f9fc;
     }
 
     .Navbar img{
@@ -57,11 +58,13 @@ export default {
     .Links:hover{
         color: #2f55d4;
         cursor: pointer;
+
     }
 
     .Icons-container{
         display: flex;
         gap: 10px;
+        cursor: pointer;
     }
 
     .Small-icons{
