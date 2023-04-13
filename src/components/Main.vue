@@ -1,5 +1,6 @@
 <script>
 import CardsItem from './CardsItem.vue';
+import PriceCardItem from './PriceCardItem.vue';
 
 export default {
     name: "Main",
@@ -11,9 +12,17 @@ export default {
                 'Customizable',
                 'Scalable',
             ],
+            PriceCardItems: [
+                'Basic',
+                'Business',
+                'Enterprise',
+            ]
         }
     },
-    components: { CardsItem },
+    components: { 
+        CardsItem,
+        PriceCardItem,
+     },
 }
 
 </script>
@@ -29,7 +38,7 @@ export default {
         </div>
         <div class="Quickstart">
             <h4>Quickstart</h4>
-            <h2>Awesome isn't it? Let's dive in!</h2>
+            <h1>Awesome isn't it? Let's dive in!</h1>
             <h3>Start working with <span>Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</h3>
         </div>
         <div class="npm-box">
@@ -62,6 +71,22 @@ export default {
                     <img src="../../public/img/1.png" alt="">
                 </div>
             </div>
+            <div class="Rates">
+                <h1>Our rates for developer from landrick team</h1>
+                <h3>Start working with <span>Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</h3>
+            </div>
+            <div class="PriceCards">
+                <PriceCardItem v-for="PriceCard in PriceCardItems" :type="PriceCard" :price="9.00" :description="'All the basics for business that are just getting started.'"></PriceCardItem>
+            </div>
+            <div class="Email-Us">
+                <h1>Our rates for developer from landrick team</h1>
+                <h3>Start working with <span>Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</h3>
+                <div>
+                    <input type="text" placeholder="Email Address">
+                    <button>Get Started</button>
+                </div>
+            </div>
+            
 </template>
 
 <style scoped>
@@ -208,5 +233,64 @@ export default {
         color: white;
         border: none;
         margin-top: 20px;
+    }
+
+    .Rates{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .Rates h3{
+        color: #adb5bd;
+    }
+
+    .Rates span{
+        color: #2f55d4;
+    }
+
+    .PriceCards{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        padding: 100px;
+    }
+
+    .Email-Us{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 100px;
+    }
+
+    .Email-Us h3{
+        color: #adb5bd;
+        width: 30%;
+    }
+
+    .Email-Us span{
+        color: #2f55d4;
+    }
+
+    .Email-Us input{
+        border-radius: 20px;
+        border: 1px solid lightgray;
+        padding: 13px;
+        width: 400px;
+    }
+
+    .Email-Us button{
+        border-radius: 20px;
+        color: white;
+        background-color: #2f55d4;
+        border: none;
+        padding: 13px;
+        font-weight: bold;
+        margin-left: -90px;
     }
 </style>
